@@ -1,5 +1,17 @@
 @import "tailwindcss";
 
+@font-face {
+  font-family: "LemiLaBiTi";
+  src: url("/fonts/乐米蜡笔体.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@theme {
+  --font-sans: "LemiLaBiTi", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
 @layer base {
   :root {
     --paper-cream: #fbe3e6;
@@ -23,7 +35,7 @@
   body {
     background-color: var(--paper-cream);
     color: var(--espresso-ink);
-    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    font-family: "LemiLaBiTi", "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overscroll-behavior-y: contain;
@@ -33,7 +45,7 @@
   h2,
   h3,
   .font-editorial {
-    font-family: "Hiragino Maru Gothic ProN", "PingFang SC", "Songti SC", "Noto Serif SC", sans-serif;
+    font-family: "LemiLaBiTi", "Hiragino Maru Gothic ProN", "PingFang SC", "Songti SC", "Noto Serif SC", sans-serif;
     letter-spacing: -0.01em;
   }
 
