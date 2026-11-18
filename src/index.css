@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --paper-cream: #fbe3e6;
+    --paper-sheet: #fcf8ec;
+    --paper-wash: #f4d3d8;
+    --sky-blue: #5b92b8;
+    --sky-blue-deep: #46789c;
+    --sky-blue-soft: #d9eaf4;
+    --meadow-green: #8da143;
+    --meadow-green-deep: #6b7f30;
+    --meadow-green-soft: #e6ebc4;
+    --espresso-ink: #3f302d;
+    --bark-muted: #755f5c;
+    --tomato-red: #d64e38;
+    --tomato-red-soft: #f9e0da;
+    --butter-yellow: #ebc148;
+    --butter-yellow-soft: #fbf0c9;
+  }
+
+  html,
+  body {
+    background-color: var(--paper-cream);
+    color: var(--espresso-ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overscroll-behavior-y: contain;
+  }
+
+  h1,
+  h2,
+  h3,
+  .font-editorial {
+    font-family: "Hiragino Maru Gothic ProN", "PingFang SC", "Songti SC", "Noto Serif SC", sans-serif;
+    letter-spacing: -0.01em;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+/* Vintage speckled recycled pastel-pink picture-book paper */
+.paper-grain-bg {
+  background-color: #fbe3e6;
+  background-image:
+    radial-gradient(at 12% 10%, rgba(242, 165, 176, 0.22) 0px, transparent 48%),
+    radial-gradient(at 88% 15%, rgba(252, 232, 200, 0.28) 0px, transparent 46%),
+    radial-gradient(at 80% 88%, rgba(244, 180, 190, 0.2) 0px, transparent 45%),
+    url("data:image/svg+xml,%3Csvg viewBox='0 0 220 220' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='storybookPaper'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='matrix' values='0.35 0 0 0 0.22  0 0.22 0 0 0.14  0 0 0.2 0 0.12  0 0 0 0.065 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23storybookPaper)'/%3E%3Ccircle cx='28' cy='42' r='1.1' fill='%238c595e' fill-opacity='0.14'/%3E%3Ccircle cx='145' cy='24' r='0.9' fill='%238c595e' fill-opacity='0.12'/%3E%3Ccircle cx='96' cy='118' r='1.2' fill='%238c595e' fill-opacity='0.13'/%3E%3Ccircle cx='192' cy='156' r='1' fill='%238c595e' fill-opacity='0.14'/%3E%3Ccircle cx='54' cy='188' r='1.1' fill='%238c595e' fill-opacity='0.12'/%3E%3C/svg%3E");
+}
+
+/* Soft red & cream gingham picnic cloth ribbon */
+.gingham-strip {
+  background-color: #fcf8ec;
+  background-image:
+    linear-gradient(90deg, rgba(214, 78, 56, 0.28) 50%, transparent 50%),
+    linear-gradient(rgba(214, 78, 56, 0.28) 50%, transparent 50%);
+  background-size: 12px 12px;
+}
+
+/* Borderless-feel soft storybook cards with delicate warm tint & airy shadow */
+.sketch-card {
+  background-color: #fcf8ec;
+  border: 1px solid rgba(154, 114, 118, 0.22);
+  border-radius: 18px 20px 17px 21px / 20px 17px 21px 18px;
+  box-shadow: 0 3px 14px rgba(145, 95, 102, 0.08);
+}
+
+.sketch-card-wash-blue {
+  background-color: #e2eff7;
+  border: 1px solid rgba(91, 146, 184, 0.28);
+  border-radius: 19px 17px 21px 18px / 17px 21px 18px 19px;
+  box-shadow: 0 3px 14px rgba(91, 146, 184, 0.08);
+}
+
+.sketch-card-wash-sage {
+  background-color: #ebf0d1;
+  border: 1px solid rgba(122, 143, 54, 0.26);
+  border-radius: 18px 21px 17px 19px / 21px 17px 19px 18px;
+  box-shadow: 0 3px 14px rgba(122, 143, 54, 0.07);
+}
+
+.sketch-card-wash-ochre {
+  background-color: #fcf2d2;
+  border: 1px solid rgba(214, 165, 58, 0.3);
+  border-radius: 20px 18px 21px 17px / 18px 20px 17px 21px;
+  box-shadow: 0 3px 14px rgba(214, 165, 58, 0.08);
+}
+
+.sketch-card-wash-red {
+  background-color: #fbe5e0;
+  border: 1px solid rgba(214, 78, 56, 0.24);
+  border-radius: 19px 20px 18px 19px / 20px 18px 19px 18px;
+  box-shadow: 0 3px 14px rgba(214, 78, 56, 0.07);
+}
+
+/* Soft stitched warm rose-cocoa frame (no harsh black) */
+.stitched-frame {
+  border: 1.5px dashed rgba(154, 114, 118, 0.42);
+  border-radius: 16px;
+}
+
+.sketch-input {
+  background-color: #fcf8ec;
+  border: 1.5px solid rgba(154, 114, 118, 0.34);
+  border-radius: 13px 15px 14px 12px;
+  color: #3f302d;
+  transition: border-color 140ms ease, box-shadow 140ms ease, background-color 140ms ease;
+}
+
+.sketch-input:focus {
+  outline: none;
+  border-color: #5b92b8;
+  background-color: #fffdf8;
+  box-shadow: 0 0 0 3px rgba(91, 146, 184, 0.22);
+}
+
+.sketch-btn-primary {
+  background-color: #4d7fa3;
+  color: #fcf8ec;
+  border: none;
+  border-radius: 14px 16px 15px 14px;
+  box-shadow: 0 3px 10px rgba(77, 127, 163, 0.24);
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 120ms ease;
+}
+
+.sketch-btn-primary:hover {
+  background-color: #416e8e;
+}
+
+.sketch-btn-primary:active {
+  transform: scale(0.98);
+}
+
+.sketch-btn-secondary {
+  background-color: #f6e7e9;
+  color: #3f302d;
+  border: 1px solid rgba(154, 114, 118, 0.3);
+  border-radius: 14px 15px 13px 15px;
+  transition: transform 120ms cubic-bezier(0.16, 1, 0.3, 1), background-color 120ms ease;
+}
+
+.sketch-btn-secondary:hover {
+  background-color: #eed8dc;
+}
+
+.sketch-btn-secondary:active {
+  transform: scale(0.98);
+}
+
+/* Safe area padding for mobile bottom bar */
+.pb-safe {
+  padding-bottom: max(0.5rem, env(safe-area-inset-bottom));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
